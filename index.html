@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Money Saving Calculator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f0f0f0;
+    }
+
+    .container {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .heading {
+      position: absolute;
+      top: 15%;
+    }
+
+    input[type="text"],
+    input[type="submit"] {
+      padding: 10px;
+      margin-bottom: 10px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    input[type="submit"] {
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #0056b3;
+    }
+
+    #result {
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    #result2 {
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    #errorMessage {
+      color: red;
+      margin-top: 5px;
+    }
+
+    span {
+      color: #007bff;
+    }
+
+    #element {
+      color: #0056b3;
+    }
+
+    @media (max-width: 768px) {
+      #element {
+        font-size: 1.6rem;
+      }
+      h2{
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="heading">
+    <h1 id="element"></h1>
+  </div>
+  <div class="container">
+    <h2>Money Saving Calculator By <span>Dev Mistry</span></h2>
+    <form id="savingForm">
+      <label for="date">Enter The Current Date (1-31):</label>
+      <input type="text" id="date" name="date" placeholder="Enter date">
+      <input type="submit" value="Calculate">
+      <div id="errorMessage"></div>
+    </form>
+    <div id="result"></div>
+    <div id="result2"></div>
+  </div>
+  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+  <script>
+    document.getElementById('savingForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      const dateInput = document.getElementById('date').value.trim();
+
+      if (dateInput === '') {
+        var typed = new Typed('#errorMessage', {
+          strings: ['Please Enter The Current Date'],
+          typeSpeed: 50,
+        });
+        return;
+      }
+
+      const day = parseInt(dateInput);
+      let amount;
+
+      switch (day) {
+        case 1:
+          amount = 1;
+          break;
+        case 2:
+          amount = 3;
+          break;
+        case 3:
+          amount = 6;
+          break;
+        case 4:
+          amount = 10;
+          break;
+        case 5:
+          amount = 15;
+          break;
+        case 6:
+          amount = 21;
+          break;
+        case 7:
+          amount = 28;
+          break;
+        case 8:
+          amount = 36;
+          break;
+        case 9:
+          amount = 45;
+          break;
+        case 10:
+          amount = 55;
+          break;
+        case 11:
+          amount = 66;
+          break;
+        case 12:
+          amount = 78;
+          break;
+        case 13:
+          amount = 91;
+          break;
+        case 14:
+          amount = 105;
+          break;
+        case 15:
+          amount = 120;
+          break;
+        case 16:
+          amount = 136;
+          break;
+        case 17:
+          amount = 153;
+          break;
+        case 18:
+          amount = 171;
+          break;
+        case 19:
+          amount = 190;
+          break;
+        case 20:
+          amount = 210;
+          break;
+        case 21:
+          amount = 231;
+          break;
+        case 22:
+          amount = 253;
+          break;
+        case 23:
+          amount = 276;
+          break;
+        case 24:
+          amount = 300;
+          break;
+        case 25:
+          amount = 325;
+          break;
+        case 26:
+          amount = 351;
+          break;
+        case 27:
+          amount = 378;
+          break;
+        case 28:
+          amount = 406;
+          break;
+        case 29:
+          amount = 435;
+          break;
+        case 30:
+          amount = 465;
+          break;
+        case 31:
+          amount = 496;
+          break;
+        default:
+          amount = 0;
+          break;
+      }
+      document.getElementById('result').textContent = "The Amount You Have to Store Today is: " + day;
+      document.getElementById('result2').textContent = "The Total Amount You Have Stored Today is: " + amount;
+      document.getElementById('errorMessage').textContent = ""; // Clear any previous error message
+    });
+
+
+    var typed = new Typed('#element', {
+      strings: ['Welcome To Money Saving Site', 'Fill This Form For Save Money Yourself', 'Welcome To Money Saving Site', 'Fill This Form For Save Money Yourself', , 'Welcome To Money Saving Site', 'Fill This Form For Save Money Yourself', 'Welcome To Money Saving Site', 'Fill This Form For Save Money Yourself', 'Welcome To Money Saving Site', 'Fill This Form For Save Money Yourself', , 'Welcome To Money Saving Site', 'Fill This Form For Save Money Yourself', 'Welcome To Money Saving Site', 'Fill This Form For Save Money Yourself', 'Welcome To Money Saving Site', 'Fill This Form For Save Money Yourself', , 'Welcome To Money Saving Site', 'Fill This Form For Save Money Yourself', 'Welcome To Money Saving Site', 'Fill This Form For Save Money Yourself', 'Welcome To Money Saving Site', 'Fill This Form For Save Money Yourself', , 'Welcome To Money Saving Site', 'Fill This Form For Save Money Yourself', 'Welcome To Money Saving Site', 'Fill This Form For Save Money Yourself', 'Welcome To Money Saving Site', 'Fill This Form For Save Money Yourself', , 'Welcome To Money Saving Site', 'Fill This Form For Save Money Yourself', 'Welcome To Money Saving Site', 'Fill This Form For Save Money Yourself', 'Welcome To Money Saving Site', 'Fill This Form For Save Money Yourself', , 'Welcome To Money Saving Site', 'Fill This Form For Save Money Yourself', 'Welcome To Money Saving Site', 'Fill This Form For Save Money Yourself', 'Welcome To Money Saving Site', 'Fill This Form For Save Money Yourself', , 'Welcome To Money Saving Site', 'Fill This Form For Save Money Yourself'],
+      typeSpeed: 50,
+    });
+
+
+  </script>
+</body>
+
+</html>
